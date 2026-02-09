@@ -17,6 +17,9 @@ abbr mst "make start"
 abbr msp "make stop"
 abbr mc "make checks"
 
+abbr du "docker compose up -d"
+abbr ds "docker stop "
+
 abbr gs "git switch"
 abbr gf "git fetch"
 abbr gp "git pull"
@@ -74,7 +77,7 @@ export FZF_DEFAULT_OPTS="
 --color=fg:#ffffff,hl:#00ff00,fg+:#a5b4fc,bg+:#737373,hl+:#ffff00,info:#14b8a6,spinner:#00ffff,pointer:#f59e0b
 "
 
-alias ls "exa --icons"
+alias ls "exa -a --icons"
 alias treelist "tree -a -I '.git'"
 alias fetch "fastfetch --localip-show-ipv4 false"
 
@@ -114,3 +117,8 @@ set -g fish_pager_color_description $comment
 set -g fish_pager_color_selected_background --background=$selection
 
 fish_add_path ~/bin
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /home/calyrex/.lmstudio/bin
+# End of LM Studio CLI section
+

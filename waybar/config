@@ -20,21 +20,21 @@
     "hyprland/window": {
       "format": "{class}",
       "rewrite": {
-          "zen": "   Zen Browser",
-          "thunderbird": "  Thunderbird",
-          "com.mitchellh.ghostty": "   Ghostty",
-          "org.keepassxc.KeePassXC": "   KeePass",
+          "zen": "  Zen Browser",
+          "org.mozilla.Thunderbird": "  Thunderbird",
+          "com.mitchellh.ghostty": "  Ghostty",
+          "org.keepassxc.KeePassXC": "  KeePass",
           "org.telegram.desktop": "  Telegram",
-          "org.gnome.Nautilus": "   Nautilus",
+          "org.gnome.Nautilus": "  Nautilus",
           "Postman": "  Postman",
           "deepin-calculator": "  Calculator",
-          "google-chrome": "   Chrome",
-          "Pidgin": "   Pidgin",
-          "wofi": "󰍉   Apps",
-          "hiddify": "󰦝   Hiddify",
+          "google-chrome": "  Chrome",
+          "Pidgin": "  Pidgin",
+          "wofi": "󰍉  Apps",
+          "hiddify": "󰦝  Hiddify",
           "Termius": "  Termius",
-          "jetbrains-goland": "   GoLand",
-          "jetbrains-datagrip": "   DataGrip"
+          "jetbrains-goland": "  GoLand",
+          "jetbrains-datagrip": "  DataGrip"
         },
       "max-length": 30
     },
@@ -48,7 +48,7 @@
         "format": "{name}"
     },
     "hyprland/language": {
-        "format": "   {}",
+        "format": "  {}",
         "format-en": "EN",
         "format-ru": "RU"
     },
@@ -58,7 +58,7 @@
     "clock": {
       "interval": 1,
       "format": "{:%A %B %d %H:%M:%S}  ",
-      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+      "tooltip-format": "<tt><small>{calendar}</small></tt>"
     },
     "cpu": {
       "format": "cpu {usage}%"
@@ -71,9 +71,9 @@
       "format": "{icon} {volume}%",
       "format-icons": {
         "default": [
-          "  ",
-          "  ",
-          "  "
+          " ",
+          " ",
+          " "
         ]
       },
       "on-click": "pavucontrol",
