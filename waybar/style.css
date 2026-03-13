@@ -1,95 +1,87 @@
 * {
-  font-family: "JetBrainsMono Nerd Font", 
-  		monospace;
-  font-size: 16px;
-  min-height: 0;
-  border-radius: 1rem;
-  padding: 0.1rem;
-}
-
-window#waybar {
-  background: rgba(255, 255, 255, 0.0);
-  color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: "0xProto Nerd Font";
+    min-height: 0;
+    border-radius: 1rem;
+    padding: 0.1rem;
 }
 
 tooltip {
-  background: #FFFFFF;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 6px;
 }
 
 tooltip label {
-  color: black;
-  font-family: "JetBrainsMono Nerd Font";
+    color: #000000;
+}
+
+window#waybar {
+    background: rgba(255, 255, 255, 0.25);
+    color: #000;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    margin: 6px;
 }
 
 #workspaces button {
-  padding: 0 5px;
-  background: transparent;
-  color: #FFFFFF;
-  border: none;
-  border-radius: 0;
-  box-shadow: inset 0 -2px transparent;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    margin: 2px;
 }
 
 #workspaces button:hover {
-  transition: ease-in-out 0.2s;
-  background: #bbbbbb;
+    background: rgba(255, 255, 255, 0.35);
 }
 
 #workspaces button.active {
-  transition: ease-in-out, 0.2s;
-  box-shadow: inset 0 -2px #FFFFFF;
-}
-
-#clock {
-  padding: 0 10px;
+    background: rgba(255, 255, 255, 0.55);
 }
 
 #clock,
 #cpu,
 #memory,
 #pulseaudio,
-#tray {
-  margin: 2px;
-  padding-left: 4px;
-  padding-right: 4px;
-  color: #FFFFFF;
+#battery,
+#tray,
+#language {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    padding: 2px 10px;
+    margin: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+#clock {
+    padding: 0 10px;
+    padding-right: 5px;
 }
 
 .modules-left > widget:first-child > #workspaces {
-  margin-left: 0;
+    margin-left: 0;
 }
 
 .modules-right > widget:last-child > #workspaces {
-  margin-right: 0;
+    margin-right: 0;
 }
 
 @keyframes blink {
-  to {
-    background-color: #ffffff;
-    color: #000000;
-  }
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
 }
 
 label:focus {
-  background-color: #000000;
+    background-color: #000000;
 }
 
 #tray > .passive {
-  -gtk-icon-effect: dim;
+    -gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
-  -gtk-icon-effect: highlight;
-  background-color: #eb4d4b;
-}
-
-#custom-arch {
-  margin-left: 5px;
-  padding: 0 10px;
-  font-size: 24px;
-  transition: color .5s;
-}
-
-#custom-arch:hover {
-  color: #1793d1;
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
 }

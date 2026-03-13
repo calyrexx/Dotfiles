@@ -10,19 +10,23 @@ function fish_right_prompt
   echo (set_color e5e5e5)"@$USER"
 end
 
-# Сокращения для make
+# Abbrs
+# make
 abbr mcp --set-cursor "make compush m=\"%\""
 abbr ms --set-cursor "make stage m=\"%\""
+abbr mc "make checks"
 abbr mst "make start"
 abbr msp "make stop"
-abbr mc "make checks"
 
-abbr du "docker compose up -d"
-abbr ds "docker stop "
-
+# git
 abbr gs "git switch"
 abbr gf "git fetch"
 abbr gp "git pull"
+
+# docker
+abbr du "docker compose up -d"
+abbr ds "docker compose down"
+abbr ds "docker ps"
 
 # custom prompt
 function fish_prompt
@@ -32,9 +36,8 @@ function fish_prompt
 
   echo -n $transformed_pwd
 
-  # git branch  
+  # git branch
   if git rev-parse --is-inside-work-tree >/dev/null 2>&1
-    #space
     echo -n " "
 
     echo -n (set_color --bold 4338ca)"("
@@ -46,12 +49,10 @@ function fish_prompt
     set_color normal
   end
 
-  # space
   echo -n " "
 
   echo -n (set_color --bold 14b8a6)"→"
-  
-  #space
+
   echo -n " "
 
   set_color normal
@@ -62,7 +63,7 @@ set -x PATH $PATH:/usr/local/bin:/opt/bin
 set -gx PATH $PATH (go env GOPATH)/bin
 
 # set editor
-set -x EDITOR "code"
+set -x EDITOR "nano"
 
 # for hyprland
 set -x WLR_NO_HARDWARE_CURSORS 1
@@ -71,15 +72,8 @@ set -x WLR_NO_HARDWARE_CURSORS 1
 set -x GDK_BACKEND wayland
 set -x QT_QPA_PLATFORM wayland
 
-# fzf
-export FZF_DEFAULT_OPTS="
---bind='ctrl-j:down,ctrl-k:up,ctrl-t:toggle-all,ctrl-v:toggle-preview,ctrl-space:toggle-preview'
---color=fg:#ffffff,hl:#00ff00,fg+:#a5b4fc,bg+:#737373,hl+:#ffff00,info:#14b8a6,spinner:#00ffff,pointer:#f59e0b
-"
-
-alias ls "exa -a --icons"
+alias ls "exa --icons"
 alias treelist "tree -a -I '.git'"
-alias fetch "fastfetch --localip-show-ipv4 false"
 
 # TokyoNight Color Palette from https://github.com/folke/tokyonight.nvim/blob/main/extras/fish/tokyonight_storm.fish
 set -l foreground c0caf5
@@ -117,8 +111,3 @@ set -g fish_pager_color_description $comment
 set -g fish_pager_color_selected_background --background=$selection
 
 fish_add_path ~/bin
-
-# Added by LM Studio CLI (lms)
-set -gx PATH $PATH /home/calyrex/.lmstudio/bin
-# End of LM Studio CLI section
-

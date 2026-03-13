@@ -2,14 +2,14 @@
   {
     "layer": "top",
     "position": "top",
-    "height": 24,
+    "height": 38,
     "spacing": 5,
     "modules-left": [
-      "custom/arch",
       "hyprland/workspaces",
       "hyprland/window"
     ],
     "modules-right": [
+      "battery",
       "cpu",
       "memory",
       "pulseaudio",
@@ -20,26 +20,23 @@
     "hyprland/window": {
       "format": "{class}",
       "rewrite": {
-          "zen": "  Zen Browser",
-          "org.mozilla.Thunderbird": "  Thunderbird",
-          "com.mitchellh.ghostty": "  Ghostty",
-          "org.keepassxc.KeePassXC": "  KeePass",
-          "org.telegram.desktop": "  Telegram",
-          "org.gnome.Nautilus": "  Nautilus",
-          "Postman": "  Postman",
-          "deepin-calculator": "  Calculator",
-          "google-chrome": "  Chrome",
-          "Pidgin": "  Pidgin",
-          "wofi": "󰍉  Apps",
-          "hiddify": "󰦝  Hiddify",
-          "Termius": "  Termius",
-          "jetbrains-goland": "  GoLand",
-          "jetbrains-datagrip": "  DataGrip"
+          "zen":	                 "  Zen Browser",
+          "thunderbird":             "  Thunderbird",
+          "com.mitchellh.ghostty":   "  Ghostty",
+          "Bitwarden": 		         "  Bitwarden",
+          "org.telegram.desktop":    "  Telegram",
+          "org.gnome.Nautilus":      "  Nautilus",
+          "Postman":                 "  Postman",
+          "deepin-calculator":       "  Calculator",
+          "google-chrome":           "  Chrome",
+          "Pidgin":                  "  Pidgin",
+          "wofi":                    "󰍉  Apps",
+          "app.hiddify.com":         "󰦝  Hiddify",
+          "Termius":                 "  Termius",
+          "jetbrains-goland":        "  GoLand",
+          "jetbrains-datagrip":      "  DataGrip"
         },
       "max-length": 30
-    },
-    "custom/arch": {
-        "format": "󰣇"
     },
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -47,8 +44,19 @@
         "warp-on-scroll": false,
         "format": "{name}"
     },
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": " {capacity}%",
+        "format-plugged":  " {capacity}%",
+        "format-alt": "{icon}  {time}",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        }
+    },
     "hyprland/language": {
-        "format": "  {}",
+        "format":    "  {}",
         "format-en": "EN",
         "format-ru": "RU"
     },
@@ -56,9 +64,9 @@
       "spacing": 10
     },
     "clock": {
-      "interval": 1,
-      "format": "{:%A %B %d %H:%M:%S}  ",
-      "tooltip-format": "<tt><small>{calendar}</small></tt>"
+      "format": "{:%a, %d. %b  %H:%M:%S}",
+      "tooltip-format": "<tt><small>{calendar}</small></tt>",
+      "interval": 1
     },
     "cpu": {
       "format": "cpu {usage}%"
@@ -77,7 +85,6 @@
         ]
       },
       "on-click": "pavucontrol",
-      "on-click-right": "foot -a pw-top pw-top"
     }
   },
 ]
