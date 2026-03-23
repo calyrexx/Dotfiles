@@ -1,0 +1,13 @@
+background-color=#ffffff33
+text-color=#000000
+
+border-color=#ffffff66
+border-size=1
+
+border-radius=14
+
+padding=12
+
+default-timeout=3000
+
+font=0xProto Nerd Font 11
